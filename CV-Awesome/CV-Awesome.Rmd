@@ -2,23 +2,22 @@
 name: Benjamin Keisling
 position: "Ph.D. Candidate"
 address: "233 Morrill Science Center, 611 North Pleasant Street, Amherst, MA 01003"
-phone: +1 22 3333 4444
-www: mariecurie.com
-email: "Marie.Curie@ens.fr"
-twitter: mariecurie
-github: mariecurie
-linkedin: mariecurie
+phone: +503 997 1899
+www: https://benjaminkeisling.weebly.com/
+email: "bkeisling@umass.edu"
+twitter: palaeobak
+github: bkeisling
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
 library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Some stuff about me
 
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences.
+
+# Education and qualifications
+
