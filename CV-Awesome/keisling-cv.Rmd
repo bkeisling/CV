@@ -2,7 +2,6 @@
 name: Benjamin A. Keisling
 position: "Ph.D. Candidate"
 address: "233 Morrill Science Center, 611 North Pleasant Street, Amherst, MA 01003"
-phone: +503 997 1899
 www: benjaminkeisling.weebly.com/
 email: "bkeisling@umass.edu"
 twitter: palaeobak
@@ -103,9 +102,9 @@ tribble(
 ```{r}
 tribble(
   ~ loc, ~ title, ~ dates,
-  "Urbino, IT", "USSSP", "2014",
   "McCarthy, AK", "International Glaciology Summer School", "2016",
-  "Minneapolis, MN", "Expert Witness Training Academy", "2016"
+  "Minneapolis, MN", "Expert Witness Training Academy", "2016",
+  "Urbino, IT", "USSSP", "2014"
 
 ) %>% 
   detailed_entries(where=loc, what=title, when = dates)
