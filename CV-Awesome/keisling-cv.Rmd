@@ -34,12 +34,23 @@ presentations <-
 # Teaching Interests
 * glaciology, glacial geology, paleoclimatology, physical oceanography, climatology, paleoceanography
 
+# Appointments
+
+```{r}
+tribble(
+  ~ uni, ~ loc, ~ degree, ~ dates,
+  "Lamont-Doherty Earth Observatory", "Palisades, NY", "Postdoctoral Fellow", "start Jan. 1 2020"
+) %>% 
+  detailed_entries(degree, loc, uni, dates)
+```
+
+
 # Education
 
 ```{r}
 tribble(
   ~ uni, ~ loc, ~ degree, ~ dates,
-  "University of Massachusetts Amherst", "Amherst, MA", "Ph.D. Geosciences", "Sept. 2015 - May 2019", 
+  "University of Massachusetts Amherst", "Amherst, MA", "Ph.D. Geosciences", "Sept. 2015 - expected Oct. 2019", 
     "Niels Bohr Institute, University of Copenhagen", "Copenhagen, DK", "Visiting Fellow, Centre of Ice and Climate", "Aug. 2016 - June 2017", 
   "University of Massachusetts Amherst", "Amherst, MA", "M.Sc. Geosciences", "Sept. 2013 - May 2015", 
   "Saint Olaf College", "Northfield, MN", "B.A. Physics", "Sept. 2009 - May 2013"
@@ -102,6 +113,8 @@ tribble(
 ```{r}
 tribble(
   ~ loc, ~ title, ~ dates,
+  "Yosemite, CA", "Advanced Climate Dynamics Course", "2019",
+  "Copenhagen, DK", "Ice Core Analysis Techniques", "2016",
   "McCarthy, AK", "International Glaciology Summer School", "2016",
   "Minneapolis, MN", "Expert Witness Training Academy", "2016",
   "Urbino, IT", "USSSP", "2014"
@@ -157,7 +170,7 @@ presentations %>%
   arrange(desc(When)) %>% 
   detailed_entries(what = Title,
                    when = glue("{month(When, label = TRUE)} {year(When)}"),
-                   with = Conference,
+                   with = Authors,
                    where = paste(Conference, Location, sep=", "),
                    why = Award)
 ```
