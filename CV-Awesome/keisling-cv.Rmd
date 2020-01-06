@@ -1,9 +1,9 @@
 ---
-name: Benjamin A. Keisling
-position: "Ph.D. Candidate"
-address: "233 Morrill Science Center, 611 North Pleasant Street, Amherst, MA 01003"
+name: Benjamin Andrew Keisling
+position: Postdoctoral Research Scientist, LDEO
+address: "109 Oceanography, 61 Route 9W, Palisades, NY 10964"
 www: benjaminkeisling.weebly.com/
-email: "bkeisling@umass.edu"
+email: "keisling@lamont.columbia.edu"
 twitter: palaeobak
 github: bkeisling
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -39,7 +39,7 @@ presentations <-
 ```{r}
 tribble(
   ~ uni, ~ loc, ~ degree, ~ dates,
-  "Lamont-Doherty Earth Observatory", "Palisades, NY", "Postdoctoral Fellow", "start Jan. 1 2020"
+  "Lamont-Doherty Earth Observatory", "Palisades, NY", "Postdoctoral Fellow", "Jan. 2020 - present"
 ) %>% 
   detailed_entries(degree, loc, uni, dates)
 ```
@@ -50,7 +50,7 @@ tribble(
 ```{r}
 tribble(
   ~ uni, ~ loc, ~ degree, ~ dates,
-  "University of Massachusetts Amherst", "Amherst, MA", "Ph.D. Geosciences", "Sept. 2015 - expected Oct. 2019", 
+  "University of Massachusetts Amherst", "Amherst, MA", "Ph.D. Geosciences", "Sept. 2015 - Oct. 2019, conferral date 02/01/2020", 
     "Niels Bohr Institute, University of Copenhagen", "Copenhagen, DK", "Visiting Fellow, Centre of Ice and Climate", "Aug. 2016 - June 2017", 
   "University of Massachusetts Amherst", "Amherst, MA", "M.Sc. Geosciences", "Sept. 2013 - May 2015", 
   "Saint Olaf College", "Northfield, MN", "B.A. Physics", "Sept. 2009 - May 2013"
@@ -73,7 +73,7 @@ read_csv(here::here("data", "awards-and-grants.csv")) %>%
 # Normal articles excluding editorials
 bibliography_entries("../data/bakpubs.bib") %>%
 #  transform(year=as.numeric(year)) %>%
-  arrange(desc(year))
+  arrange(year)
 ```
 
 # Invited Guest Lectures
@@ -128,10 +128,11 @@ tribble(
 ```{r}
 tribble(
   ~ loc, ~ title, ~ dates,
-  "IODP Proposal 814_Full_2 to drill Eirik Drift and Davis Strait", "Proponent", "2018",
-  "IODP Proposal 909_Full_2 to drill Melville Bugt and Baffin Bay", "Proponent", "2018",
-  "Named Contributor, RAFTS Proposal submitted to NERC (UK)", "Lead PI: Tina Van de Flierdt", "2018",
-  "Named Contributor, ANTIPODES Proposal submitted to PNRA (IT)", "Lead PI: Florence Colleoni", "2018"
+  "Submitted to NSF, PIs: Schaefer, Briner, DeConto, Anandakrishnan", "Collaborator, Greendrill Project", "2019",
+  "IODP Proposal 814_Full_2 to drill Eirik Drift and Davis Strait in 2022", "Proponent", "2018",
+  "IODP Proposal 909_Full_2 to drill Melville Bugt and Baffin Bay in 2022", "Proponent", "2018",
+  "Named Collaborator, RAFTS Proposal submitted to NERC (UK)", "Lead PI: Tina Van de Flierdt", "not funded, 2018",
+  "Named Collaborator, ANTIPODES Proposal submitted to PNRA (IT)", "Lead PI: Florence Colleoni", "funded, 2018"
 ) %>% 
   detailed_entries(where=loc, what=title, when = dates)
 ```
